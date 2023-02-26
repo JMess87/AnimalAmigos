@@ -30,4 +30,8 @@ router.get('/profile', async (req, res) => {
       };
 });
 
+router.get('/services', (req, res) => {
+  res.json("Inside services");
+});
+
 module.exports = router;
