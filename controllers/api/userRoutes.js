@@ -31,6 +31,49 @@ router.post('/signup', async (req, res) => {
   }
 });
 
+router.put('/:id', async (req, res) => {
+  try {
+      const user = await User.update(
+          {
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
+            username: req.body.username,
+            email: req.body.email,
+            password: req.body.password,
+            phone: req.body.phone,
+            is_owner: req.body.is_owner
+          },
+          {
+              where: {
+                  id: req.params.id,
+              },
+          }
+      );
+      res.status(200).json(user);
+  } catch (err) {
+      res.status(500).json(err);
+  }
+});
+
+router.delete('/:id', async (req, res) => {
+  try {
+      const userData = await User.destroy({
+          where: {
+              id: req.params.id
+          }
+      });
+
+      if (!userData) {
+          res.status(404).json({ message: 'No user found with this id!' });
+          return;
+      }
+
+      res.status(200).json(userData);
+  } catch (err) {
+      res.status(500).json(err);
+  }
+});
+
 router.post('/login', async (req, res) => {
   try {
     const userData = await User.findOne({ where: { email: req.body.email, password: req.body.password } });
@@ -65,3 +108,5 @@ router.post('/logout', (req, res) => {
 });
 
 module.exports = router;
+
+

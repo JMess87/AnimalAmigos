@@ -1,8 +1,10 @@
 const router = require('express').Router();
 const userRoutes = require('./userRoutes');
-const servicesRoutes = require('./servicesRoutes');
+const serviceRoutes = require('./serviceRoutes');
+const walletRoutes = require('./walletRoutes');
 
-router.use('/users', userRoutes);
-router.use('/services', servicesRoutes);
+router.use('/user', userRoutes);
+router.use('/service', serviceRoutes);
+router.use('/wallet', walletRoutes);
 
 module.exports = router;
