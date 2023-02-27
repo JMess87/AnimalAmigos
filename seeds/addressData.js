@@ -9,7 +9,7 @@ const addressdata = [
         zip: '20737',
         country: 'US',
         user_id: '()',
-    }
+    },
     {
         ID: '()',
         address: '7904 Colonial Ln.',
