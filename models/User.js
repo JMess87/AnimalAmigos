@@ -37,7 +37,7 @@ User.init(
       allowNull: false,
     },
     phone: {
-      type: DataTypes.INTEGER(10),
+      type: DataTypes.STRING,
       allowNull: false,
     },
     is_owner: {
