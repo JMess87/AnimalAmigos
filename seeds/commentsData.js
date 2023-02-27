@@ -12,17 +12,6 @@ const addresscomments = [
         country: 'US',
         user_id: '()',
     }
-    {
-        ID: '()',S
-        address: '7904 Colonial Ln.',
-        city: 'Clinton',
-        state: 'MD',
-        zip: '20735',
-        country: 'US',
-        user_id: '()',
-    }
-
-
 ];
 
 const seedComments = () => User.bulkCreate(commentsdata);
