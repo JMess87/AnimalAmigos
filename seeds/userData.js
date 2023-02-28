@@ -1,26 +1,33 @@
-// const User = require('../models/User');
+const User = require('../models/User');
+const bcrypt = require('bcrypt');
 
-// const userdata = [
-//     {
-//         first_name: 'Suvarna',
-//         last_name: 'Jadhav',
-//         username: 'suva',
-//         email: 'jadhav.suvarna28@gmail.com',
-//         password: 'suva',
-//         phone: '1231231234',
-//         is_owner: true,
-//     },
-//     {
-//         first_name: 'Shreya',
-//         last_name: 'Sawant',
-//         username: 'shreya',
-//         email: 'shreya2886@gmail.com',
-//         password: 'shreya',
-//         phone: '1231231234',
-//         is_owner: true,
-//     }
-// ];
+const userdata = [
+    {
+        first_name: 'Suvarna',
+        last_name: 'Jadhav',
+        email: 'jadhav.suvarna28@gmail.com',
+        password: bcrypt.hashSync('suva', 10),
+    },
+    {
+        first_name: 'Brian',
+        last_name: 'McDonell',
+        email: 'brian@gmail.com',
+        password: bcrypt.hashSync('brian', 10),
+    },
+    {
+        first_name: 'Pallavi',
+        last_name: 'Talekar',
+        email: 'talekar@gmail.com',
+        password: bcrypt.hashSync('pallu', 10),
+    },
+    {
+        first_name: 'Aditi',
+        last_name: 'Pimple',
+        email: 'pimple@gmail.com',
+        password: bcrypt.hashSync('aditi', 10),
+    }
+];
 
-// const seedUser = () => User.bulkCreate(userdata);
+const seedUser = () => User.bulkCreate(userdata);
 
-// module.exports = seedUser;
+module.exports = seedUser;

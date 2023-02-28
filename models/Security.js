@@ -11,27 +11,27 @@ Security.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        securityQ1: {
-            type: DataTypes.ENUM('1', '2', '3', '4', '5'),
-            allowNull: false,
-        },
-        securityQ1A: {
+        question1: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        securityQ2: {
-            type: DataTypes.ENUM('1', '2', '3', '4', '5'),
-            allowNull: false,
-        },
-        securityQ2A: {
+        answer1: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        securityQ3: {
-            type: DataTypes.ENUM('1', '2', '3', '4', '5'),
+        question2: {
+            type: DataTypes.STRING,
             allowNull: false,
         },
-        securityQ3A: {
+        answer2: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        question3: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        answer3: {
             type: DataTypes.STRING,
             allowNull: false,
         },
