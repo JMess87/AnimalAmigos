@@ -14,6 +14,7 @@
         <div>
             <h1>Animal Amigos</h1>
         </div>
+        
         <div>
             <nav class="header-nav">
                 {{#if logged_in}}
@@ -24,11 +25,13 @@
             </nav>
         </div>
     </header>
+
     <main>
         <div class="pets">
             {{{ body }}}
         </div>
     </main>
+
     {{#if logged_in}}
     <script src="/js/logout.js"></script>
     {{/if}}
