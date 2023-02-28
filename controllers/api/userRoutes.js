@@ -1,16 +1,24 @@
 const router = require('express').Router();
-const  User  = require('../../models/User');
+const User = require('../../models/User');
+const Security  = require('../../models/Security');
 
 router.post('/signup', async (req, res) => {
   try {
     const userData = await User.create({
       first_name: req.body.first_name,
       last_name: req.body.last_name,
-      username: req.body.username,
       email: req.body.email,
       password: req.body.password,
-      phone: req.body.phone,
-      is_owner: req.body.is_owner
+    });
+
+    await Security.create({
+      question1: req.body.question1,
+      answer1: req.body.answer1,
+      question2: req.body.question2,
+      answer2: req.body.answer2,
+      question3: req.body.question3,
+      answer3: req.body.answer3,
+      user_id: userData.id
     });
 
     req.session.save(() => {
@@ -37,11 +45,8 @@ router.put('/:id', async (req, res) => {
           {
             first_name: req.body.first_name,
             last_name: req.body.last_name,
-            username: req.body.username,
             email: req.body.email,
             password: req.body.password,
-            phone: req.body.phone,
-            is_owner: req.body.is_owner
           },
           {
               where: {
@@ -76,9 +81,17 @@ router.delete('/:id', async (req, res) => {
 
 router.post('/login', async (req, res) => {
   try {
-    const userData = await User.findOne({ where: { email: req.body.email, password: req.body.password } });
-    console.log("Here user is: " + userData);
+    const userData = await User.findOne({ where: { email: req.body.email } });
     if (!userData) {
+      res
+        .status(400)
+        .json({ message: 'Incorrect email or password, please try again' });
+      return;
+    }
+
+    const validPassword = await userData.checkPassword(req.body.password);
+
+    if (!validPassword) {
       res
         .status(400)
         .json({ message: 'Incorrect email or password, please try again' });

@@ -1,49 +1,75 @@
-<div class="row signup-page">
-    <h2>Sign Up</h2>
-
-    <form class="form signup-form">
-        <div class="form-group">
-            <label for="firstname">First Name:</label>
-            <input required="required" class="form-input" type="text" id="firstname"/>
+<div class="container mt-3">
+    <div class="card p-3 text-center">
+        <div class="d-flex flex-row justify-content-center mb-3">
+            <div class="image"> <img src="../assets/Dog.jpg" class="rounded-circle"> <span><i
+                        class='bx bxs-camera-plus'></i></span> </div>
+            <div class="d-flex flex-column ms-3 user-details">
+            </div>
         </div>
-        <br>
-        <div class="form-group">
-            <label for="lastname">Last Name:</label>
-            <input required="required" class="form-input" type="text" id="lastname" />
-        </div>
-        <br>
-        <div class="form-group">
-            <label for="username">Username:</label>
-            <input required="required" class="form-input" type="text" id="username" />
-        </div>
-        <br>
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input required="required" class="form-input" type="email" id="email" />
-        </div>
-        <br>
-        <div class="form-group">
-            <label for="password">Password: </label>
-            <input required="required" class="form-input" type="password" id="password" />
-        </div>
-        <br>
-        <div class="form-group">
-            <label for="phone">Phone: </label>
-            <input required="required" class="form-input" type="text" id="phone" pattern="[23456789][0-9]{9}" title="Please enter valid phone number"/>
-        </div>
-        <br>
-        <div class="form-group">
-            <label for="owner">Are you a owner: </label>
-            <select name="ownerYorN" id="owner">
-                <option value="Y">Yes</option>
-                <option value="N">No</option>
-            </select>
-        </div>
-        <br>
-        <div class="form-group">
-            <button class="btn btn-secondary" type="submit">Sign Up</button>
-        </div>
-    </form>
+        <form class="signup-form row">
+            <div class="col-md-6">
+                <div class="inputs"> <label class="left">First Name*</label> <input class="form-control" type="text"
+                        id="firstName" placeholder="Enter your first name*"> </div>
+            </div>
+            <div class="col-md-6">
+                <div class="inputs"> <label>Last Name*</label> <input class="form-control" type="text" id="lastName"
+                        placeholder="Enter your last name.*"> </div>
+            </div>
+            <div class="col-md-6">
+                <div class="inputs"> <label>Email Address*</label> <input class="form-control" type="text" id="email"
+                        placeholder="Enter your email address"> </div>
+            </div>
+            <div class="col-md-6">
+                <div class="inputs"> <label>Password*</label> <input class="form-control" type="password" id="password"
+                        placeholder="Enter your password"> </div>
+            </div>
+            <div class="col-md-6">
+                <div class="inputs"> <label>Security Question 1*</label>
+                    <select class="form-control" id="question1" placeholder="Choose a question*">
+                        <option value="What is your mothers maiden name?">What is your mothers maiden name?</option>
+                        <option value="What was the color of your first car?">What was the color of your first car?</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="inputs"> <label>Answer 1*</label> <input class="form-control" type="text" id="answer1"
+                        placeholder="Type answer*"> </div>
+            </div>
+            <div class="col-md-6">
+                <div class="inputs"> <label>Security Question 2*</label>
+                    <select class="form-control" id="question2" placeholder="Choose a question*">
+                        <option value="What is your paternal grandfathers middle name?">What is your paternal grandfathers middle name?</option>
+                        <option value="What is your favorite food?">What is your favorite food?</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="inputs"> <label>Answer 2*</label> <input class="form-control" type="text" id="answer2"
+                        placeholder="Type answer*"> </div>
+            </div>
+            <div class="col-md-6">
+                <div class="inputs"> <label>Security Question 3*</label>
+                    <select class="form-control" id="question3" placeholder="Choose a question*">
+                        <option value="What is your favorite ice cream flavor?">What is your favorite ice cream flavor?</option>
+                        <option value="What is your favorite sport?">What is your favorite sport?</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="inputs"> <label>Answer 3*</label> <input class="form-control" type="text" id="answer3"
+                        placeholder="Type answer*"> </div>
+            </div>
+            <div class="col-md-12">
+                <div class="about-inputs"> <label>About</label> <textarea class="form-control" type="text"
+                        placeholder="Tell us about yourself"> </textarea> </div>
+            </div>
+            <br><br>
+            <div class="col-md-12 mt-3 gap-2 d-flex justify-content-end row">
+                <button class="px-3 btn btn-sm btn-outline-primary">Cancel</button>
+                <button class="px-3 btn btn-sm btn-primary" type="submit">Save</button>
+            </div>
+        </form>
+    </div>
 </div>
 
 <script src="./js/signup.js"></script>
