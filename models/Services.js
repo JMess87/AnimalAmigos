@@ -67,6 +67,15 @@ Services.init(
                 key: 'id',
             },
         },
+        likes_id: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+            references: {
+                model: 'likes',
+                key: 'id',
+            },
+        },
+
     },
     {
         sequelize,
