@@ -1,0 +1,13 @@
+<section class="container text-center">
+    <p>Experience pet-sitting services and events from our furmily and make more friends !</p>
+</section>
+
+<section class="container-fluid position-relative">
+    <div class="row d-flex justify-content-center mt-3">
+
+        {{#each services as |service|}}
+        {{> service-details}}
+        {{/each}}
+
+    </div>
+</section>
