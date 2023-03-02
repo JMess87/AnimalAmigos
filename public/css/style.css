@@ -1,85 +1,68 @@
-body {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
+:root {
+    --logo-title-font-family: 'Solway', serif;
+    --title-font-family: 'Montserrat', sans-serif;
+    --landing-title-color: #69777E;
+    --landing-background: #CFD9DC;
+    --orange-button: #E6824A;
+    --brown-button: #BD8D75;
+    --cat-grey: #9F9F97;
+    --dog-brown: #745042;
 }
 
-header {
-    font-size: medium;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    color: white;
-    background-color: #1F8A70;
+* {
+    font-family: var(--title-font-family);
 }
 
-main {
-    padding-top: 40px;
+.btn {
+    background-color: var(--orange-button);
+    border: var(--orange-button);
 }
 
-.header-nav {
-    float: right;
-    padding-top: 35px;
+#btn-signup {
+    background-color: var(--orange-button);
+    border: var(--orange-button);
+    width: 9rem;
 }
 
-a {
-    color: white;
-    text-decoration: none !important;
-    font-size: large;
+#btn-login {
+    background-color: var(--brown-button);
+    border: var(--brown-button);
+    width: 9rem;
 }
 
-header div {
-    padding: 0 20px;
-    width: 50%;
+/* navbar logo */
+.navbar-brand {
+    font-family: var(--logo-title-font-family);
+    font-weight: 800;
 }
 
-.login-page {
-    max-width: 300px;
-    height: fit-content;
-    margin: auto;
-    border: 4px solid #1F8A70;
-    border-radius: 5px;
-    padding-top: 10px;
-    padding-bottom: 15px;
-    display: grid;
-    place-items: center;
-    align-content: left;
+#nav-text {
+    color: var(--landing-title-color);
 }
 
-.signup-page {
-    max-width: 300px;
-    height: fit-content;
-    margin: auto;
-    border: 4px solid #1F8A70;
-    border-radius: 5px;
-    padding-top: 10px;
-    padding-bottom: 15px;
-    display: grid;
-    place-items: center;
-    align-content: left;
+/* landing page style */
+.landing-background {
+    background-color: #CFD9DC;
 }
 
-p a {
-    color: black;
-    font-size: medium;
-    text-decoration: underline;
+#landing-title {
+    font-family: var(--logo-title-font-family);
+    font-size: 4.5rem;
+    font-weight: 800;
+    color: var(--landing-title-color);
 }
 
-button {
-    background-color: #1F8A70;
-    color: white;
-    border-radius: 5px;
+#landing-description {
+    font-family: var(--logo-title-font-family);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--landing-title-color);
 }
 
-label {
-    text-align: left;
+#landing-bg-img {
+    background-color: #CFD9DC;
 }
 
-input {
-    float: right;
-}
-
-h2 {
-    color: #1F8A70;
-    text-align: center;
+#landing-card {
+    border: 0;
 }
