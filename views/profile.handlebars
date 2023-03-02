@@ -1,3 +1,35 @@
+<div class="container mt-5">
+    <div class="row d-flex justify-content-center">
 
-<h2>Welcome {{first_name}}  {{last_name}} to Animal Amigos !!</h2>
+        <div class="col-md-10">
 
+            <div class="card p-3 py-4">
+
+                <div class="text-center">
+                    <img src="../assets/Dog.jpg" width="auto" class="rounded-circle">
+                </div>
+
+                <div class="text-center mt-3">
+                    <h5 class="mt-2 mb-0">{{ first_name }} {{ last_name }}</h5>
+                    <span>Washington, D.C. USA</span>
+                    <br>
+                    <span>{{ email }}</span>
+                    <br>
+                    <span>Phone: 234-234-2345</span>
+                    <br>
+                    <!-- CARD 1 -->
+                    <div class="container mt-5 mb-5">
+                        <div class="d-flex justify-content-center row">
+                            <div class="col-md-10">
+                                {{#each services as |service|}}
+                                {{> each-service }}
+                                {{/each}}
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

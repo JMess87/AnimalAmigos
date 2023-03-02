@@ -12,6 +12,7 @@ const servicedata = [
         service_time: '01:11:12',
         service_location: 'columbia',
         service_limitations: 'none',
+        user_id: 1,
     },
     {
         requester: 2,
@@ -24,6 +25,7 @@ const servicedata = [
         service_time: '01:11:12',
         service_location: 'columbia',
         service_limitations: 'none',
+        user_id: 2,
     }
 ];
 

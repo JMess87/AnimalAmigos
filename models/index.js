@@ -44,6 +44,8 @@ Services.belongsTo(User, {
     foreignKey: 'user_id',
 });
 
+// add association between comments and services. And think of any other association as well
+
 User.hasOne(Address, {
     foreignKey: 'user_id',
     onDelete: 'CASCADE',

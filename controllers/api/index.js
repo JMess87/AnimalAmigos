@@ -4,7 +4,7 @@ const serviceRoutes = require('./serviceRoutes');
 const walletRoutes = require('./walletRoutes');
 
 router.use('/user', userRoutes);
-router.use('/service', serviceRoutes);
+router.use('/services', serviceRoutes);
 router.use('/wallet', walletRoutes);
 
 module.exports = router;
