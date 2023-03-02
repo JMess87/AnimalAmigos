@@ -1,22 +1,25 @@
-// const router = require('express').Router();
-// const Pictures = require('../../models/Pictures');
-// const upload = require('../../utils/upload');
-// const path = require('path');
-// const multer = require('multer');
-// const local = multer({ dest: path.join(__dirname, '../../uploads') });
+const router = require('express').Router();
+const Pictures = require('../../models/Pictures');
+const uploader = require('../../utils/upload');
+const path = require('path');
+const multer = require('multer');
 
-// router.get('/', async (req, res) => {
-//     try {
-//         const pictureData = await Pictures.findAll();
-//         res.status(200).json(pictureData);
-//     } catch (err) {
-//         res.status(500).json(err);
-//     }
-// });
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, 'uploads/')
+    },
+    filename: function (req, file, cb) {
+        cb(null, file.originalname)
+    }
+});
+
+const upload = multer({ storage });
+
+router.post('/upload', upload.fields([{ name: 'file' }]), uploader.uploadImage);
 
 
 
 
 
 
-// module.exports = router;
+module.exports = router;
