@@ -13,6 +13,10 @@
     font-family: var(--title-font-family);
 }
 
+body {
+    background-color: #CFD9DC;
+}
+
 .btn {
     background-color: var(--orange-button);
     border: var(--orange-button);
@@ -34,6 +38,7 @@
 .navbar-brand {
     font-family: var(--logo-title-font-family);
     font-weight: 800;
+    color: var(--landing-title-color);
 }
 
 #nav-text {
@@ -65,4 +70,76 @@
 
 #landing-card {
     border: 0;
+}
+
+/* profile_service page style */
+
+#img-profile-nav-round {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+#img-profile-round {
+    width: 11rem;
+    height: 11rem;
+}
+
+.img-service-square {
+    width: 12rem;
+    height: 12rem;
+}
+
+#profile-info {
+    padding-top: 5rem;
+    color: var(--landing-title-color);
+}
+
+.profile-name {
+    font-family: var(--title-font-family);
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+#post-date-text {
+    color: var(--cat-grey);
+    font-weight: 300;
+}
+
+#service-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+#service-description {
+    font-weight: 400;
+}
+
+#service-user-location-text {
+    color: var(--cat-grey);
+    font-weight: 300;
+}
+
+.profile-button {
+    background-color: var(--brown-button);
+    border: var(--brown-button);
+}
+
+.profile-navigation-text {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.profile-status-number {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.service-likes {
+    color: var(--orange-button);
+    font-weight: 700;
+}
+
+.service-points {
+    color: var(--orange-button);
+    font-weight: 600;
 }

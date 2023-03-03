@@ -18,7 +18,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
-<body>
+<body style="background-color: #CFD9DC">
   <header class="landing-background">
     <!-- navbar with responsive display - collapse toggle button -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -56,12 +56,81 @@
         <p class="card-text mb-4" id="landing-description">Join our furmily today to meet more friends and experience
           pet-sitting services!</p>
         <section class="container text-center mt-3">
-          <button type="button" class="btn btn-secondary me-3" id="btn-signup">Sign-up</button>
+          <button type="button" class="btn btn-secondary me-3" id="btn-signup" data-bs-toggle="modal"
+            data-bs-target="#SignUpModal">Sign-up</button>
           <button type="button" class="btn btn-secondary ms-3" id="btn-login">Log-in</button>
         </section>
       </div>
     </div>
   </main>
+
+
+  <!-- Signup Modal -->
+  <div class="modal" id="SignUpModal">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+
+        <!-- Modal body -->
+        <div class="modal-body">
+
+          <div class="d-flex justify-content-center row">
+            <div class="col-md-10">
+              <div class="row p-2 bg-white">
+
+                <div class="col-md-6 mt-1 text-start">
+                  <h5>Sign up for a free account</h5>
+
+                  <!-- form input box to create or update services-->
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Post title</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput"
+                      placeholder="Example input placeholder">
+                  </div>
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label">Description</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2"
+                      placeholder="Another input placeholder">
+                  </div>
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label">Price</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2"
+                      placeholder="Another input placeholder">
+                  </div>
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label">Location</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2"
+                      placeholder="Another input placeholder">
+                  </div>
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label">Date and time</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2"
+                      placeholder="Another input placeholder">
+                  </div>
+
+                </div>
+
+                <!-- side information and buttons -->
+                <div class="align-items-center align-content-center col-md-3 border-left mt-1">
+
+                </div>
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button class="btn btn-primary btn-sm mt-2" type="button">Save</button>
+                <button class="btn btn-primary btn-sm mt-2" type="button" data-bs-dismiss="modal">Cancel</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
 
   <!-- <script src="/assets/js/index.js"></script> -->
 </body>
