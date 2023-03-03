@@ -6,6 +6,7 @@ const editProfileButtonHandler = async (event) => {
         const last_name = document.querySelector('#lastName').value.trim();
         const email = document.querySelector('#email').value.trim();
         const password = document.querySelector('#password').value.trim();
+        const phone_number = document.querySelector('#phoneNumber').value.trim();
         const address = document.querySelector('#address').value.trim();
         const city = document.querySelector('#city').value.trim();
         const state = document.querySelector('#state').value.trim();
@@ -19,7 +20,7 @@ const editProfileButtonHandler = async (event) => {
             const response = await fetch(`/api/user/${id}`,
                 {
                     method: 'PUT',
-                    body: JSON.stringify({ first_name, last_name, email, password, address, city, state, zip, country }),
+                    body: JSON.stringify({ first_name, last_name, email, password, phone_number, address, city, state, zip, country }),
                     headers: { 'Content-Type': 'application/json' },
                 });
 

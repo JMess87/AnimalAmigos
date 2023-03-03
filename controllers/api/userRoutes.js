@@ -3,6 +3,7 @@ const User = require('../../models/User');
 const Security = require('../../models/Security');
 const Address = require('../../models/Address');
 const bcrypt = require('bcrypt');
+// const withAuth = require('../utils/auth');
 
 router.post('/signup', async (req, res) => {
   try {
@@ -11,6 +12,7 @@ router.post('/signup', async (req, res) => {
       last_name: req.body.last_name,
       email: req.body.email,
       password: req.body.password,
+      phone_number: req.body.phone_number,
     });
 
     await Security.create({
@@ -42,15 +44,14 @@ router.post('/signup', async (req, res) => {
 });
 
 router.put('/:id', async (req, res) => {
-
-  console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
   try {
       const user = await User.update(
           {
             first_name: req.body.first_name,
             last_name: req.body.last_name,
             email: req.body.email,
-            password: req.body.password
+            password: req.body.password,
+            phone_number: req.body.phone_number,
           },
           {
               where: {

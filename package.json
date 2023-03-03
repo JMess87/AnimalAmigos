@@ -1,5 +1,5 @@
-{
-    "name": "animal-amigos",
+ { 
+  "name": "animal-amigos",
     "version": "1.0.0",
     "description": "social media for pets",
     "main": "server.js",
