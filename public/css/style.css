@@ -1,85 +1,145 @@
+:root {
+    --logo-title-font-family: 'Solway', serif;
+    --title-font-family: 'Montserrat', sans-serif;
+    --landing-title-color: #69777E;
+    --landing-background: #CFD9DC;
+    --orange-button: #E6824A;
+    --brown-button: #BD8D75;
+    --cat-grey: #9F9F97;
+    --dog-brown: #745042;
+}
+
+* {
+    font-family: var(--title-font-family);
+}
+
 body {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
+    background-color: #CFD9DC;
 }
 
-header {
-    font-size: medium;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    color: white;
-    background-color: #1F8A70;
+.btn {
+    background-color: var(--orange-button);
+    border: var(--orange-button);
 }
 
-main {
-    padding-top: 40px;
+#btn-signup {
+    background-color: var(--orange-button);
+    border: var(--orange-button);
+    width: 9rem;
 }
 
-.header-nav {
-    float: right;
-    padding-top: 35px;
+#btn-login {
+    background-color: var(--brown-button);
+    border: var(--brown-button);
+    width: 9rem;
 }
 
-a {
-    color: white;
-    text-decoration: none !important;
-    font-size: large;
+/* navbar logo */
+.navbar-brand {
+    font-family: var(--logo-title-font-family);
+    font-weight: 800;
+    color: var(--landing-title-color);
 }
 
-header div {
-    padding: 0 20px;
-    width: 50%;
+#nav-text {
+    color: var(--landing-title-color);
 }
 
-.login-page {
-    max-width: 300px;
-    height: fit-content;
-    margin: auto;
-    border: 4px solid #1F8A70;
-    border-radius: 5px;
-    padding-top: 10px;
-    padding-bottom: 15px;
-    display: grid;
-    place-items: center;
-    align-content: left;
+/* landing page style */
+.landing-background {
+    background-color: #CFD9DC;
 }
 
-.signup-page {
-    max-width: 300px;
-    height: fit-content;
-    margin: auto;
-    border: 4px solid #1F8A70;
-    border-radius: 5px;
-    padding-top: 10px;
-    padding-bottom: 15px;
-    display: grid;
-    place-items: center;
-    align-content: left;
+#landing-title {
+    font-family: var(--logo-title-font-family);
+    font-size: 4.5rem;
+    font-weight: 800;
+    color: var(--landing-title-color);
 }
 
-p a {
-    color: black;
-    font-size: medium;
-    text-decoration: underline;
+#landing-description {
+    font-family: var(--logo-title-font-family);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--landing-title-color);
 }
 
-button {
-    background-color: #1F8A70;
-    color: white;
-    border-radius: 5px;
+#landing-bg-img {
+    background-color: #CFD9DC;
 }
 
-label {
-    text-align: left;
+#landing-card {
+    border: 0;
 }
 
-input {
-    float: right;
+/* profile_service page style */
+
+#img-profile-nav-round {
+    width: 2.5rem;
+    height: 2.5rem;
 }
 
-h2 {
-    color: #1F8A70;
-    text-align: center;
+#img-profile-round {
+    width: 11rem;
+    height: 11rem;
+}
+
+.img-service-square {
+    width: 12rem;
+    height: 12rem;
+}
+
+#profile-info {
+    padding-top: 5rem;
+    color: var(--landing-title-color);
+}
+
+.profile-name {
+    font-family: var(--title-font-family);
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+#post-date-text {
+    color: var(--cat-grey);
+    font-weight: 300;
+}
+
+#service-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+#service-description {
+    font-weight: 400;
+}
+
+#service-user-location-text {
+    color: var(--cat-grey);
+    font-weight: 300;
+}
+
+.profile-button {
+    background-color: var(--brown-button);
+    border: var(--brown-button);
+}
+
+.profile-navigation-text {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.profile-status-number {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.service-likes {
+    color: var(--orange-button);
+    font-weight: 700;
+}
+
+.service-points {
+    color: var(--orange-button);
+    font-weight: 600;
 }
