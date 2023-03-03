@@ -1,6 +1,8 @@
 const router = require('express').Router();
 const User = require('../../models/User');
-const Security  = require('../../models/Security');
+const Security = require('../../models/Security');
+const Address = require('../../models/Address');
+const bcrypt = require('bcrypt');
 
 router.post('/signup', async (req, res) => {
   try {
@@ -40,20 +42,33 @@ router.post('/signup', async (req, res) => {
 });
 
 router.put('/:id', async (req, res) => {
+
+  console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
   try {
       const user = await User.update(
           {
             first_name: req.body.first_name,
             last_name: req.body.last_name,
             email: req.body.email,
-            password: req.body.password,
+            password: req.body.password
           },
           {
               where: {
                   id: req.params.id,
-              },
+            },
+            individualHooks: true
           }
       );
+
+      await Address.create({
+        address: req.body.address,
+        city: req.body.city,
+        state: req.body.state,
+        zip: req.body.zip,
+        country: req.body.country,
+        user_id: req.session.user_id,
+      });
+
       res.status(200).json(user);
   } catch (err) {
       res.status(500).json(err);

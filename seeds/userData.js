@@ -5,29 +5,42 @@ const userdata = [
     {
         first_name: 'Suvarna',
         last_name: 'Jadhav',
-        email: 'jadhav.suvarna28@gmail.com',
-        password: bcrypt.hashSync('suva', 10),
+        email: 'suva@gmail.com',
+        password: 'suva'
     },
     {
         first_name: 'Brian',
         last_name: 'McDonell',
         email: 'brian@gmail.com',
-        password: bcrypt.hashSync('brian', 10),
+        password: 'brian'
     },
     {
         first_name: 'Pallavi',
         last_name: 'Talekar',
         email: 'talekar@gmail.com',
-        password: bcrypt.hashSync('pallu', 10),
+        password: 'pallu'
     },
     {
         first_name: 'Aditi',
         last_name: 'Pimple',
         email: 'pimple@gmail.com',
-        password: bcrypt.hashSync('aditi', 10),
+        password: 'aditi'
+    },
+    {
+        first_name: 'Gabe',
+        last_name: 'Perry',
+        email: 'Gabe@gmail.com',
+        password: 'gabe'
+    },
+    {
+        first_name: 'Steve',
+        last_name: 'Smith',
+        email: 'Ssmith@gmail.com',
+        password: 'Steve'
     }
+
 ];
 
-const seedUser = () => User.bulkCreate(userdata);
+const seedUser = () => User.bulkCreate(userdata, { individualHooks: true });
 
 module.exports = seedUser;
