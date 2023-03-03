@@ -2,6 +2,7 @@ const router = require('express').Router();
 const User = require('../models/User');
 const Wallet = require('../models/Wallet');
 const Services = require('../models/Services');
+const Address = require('../models/Address');
 
 router.get('/', async (req, res) => {
   res.render('homepage');
@@ -24,7 +25,11 @@ router.get('/profile', async (req, res) => {
       },
       {
         model: Services
-      }]
+        },
+        {
+          model: Address
+        }
+      ]
     });
     if (!userData) {
       res.status(404).json({ message: 'No user with this id!' });

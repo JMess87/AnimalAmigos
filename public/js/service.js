@@ -28,3 +28,4 @@ const serviceFormHandler = async (event) => {
 };
 
 document.querySelector('.service-form').addEventListener('submit', serviceFormHandler);
+

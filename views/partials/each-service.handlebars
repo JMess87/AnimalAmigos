@@ -11,7 +11,116 @@
             <h4 class="mr-1">{{ service_price }}</h4><span class="strike-text">Points</span>
         </div>
 
-        <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm" type="button">Edit</button><button
-                class="btn btn-outline-primary btn-sm mt-2" type="button">Cancel</button></div>
+        <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm" type="button" data-bs-toggle="modal"
+                data-bs-target="#myModal">Edit</button>
+            <button class="btn btn-outline-primary btn-sm mt-2" id="delete" data-id="{{ id }}">Delete</button>
+        </div>
     </div>
-</div>
+
+    <div class="modal" id="myModal">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+
+                <!-- Modal body -->
+                <div class="modal-body">
+
+                    <div class="d-flex justify-content-center row">
+                        <div class="col-md-10">
+                            <div class="row p-2 bg-white">
+                                <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image"
+                                        src="../assets/Cat.jpg"></div>
+
+                                <!-- comments information -->
+                                <div class="col-md-6 mt-1 text-start">
+                                    <h5>Post Title: {{ service_name }}</h5>
+                                    <p>Description: {{ service_description }}</p>
+                                    <p>By User in location name: {{ service_location }}</p>
+                                    <p>Post date: {{ service_date }}</p>
+                                    <p>Likes: Number</p>
+
+                                    <!-- form input box to create or update services-->
+                                    <form class="edit-service-form row">
+                                        <div class="mb-3">
+                                            <div class="inputs">
+                                                <label>Service Name</label>
+                                                <input class="form-control" type="text" id="serviceName"
+                                                    value="{{ service_name }}">
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="inputs">
+                                                <label>Service Description</label>
+                                                <input class="form-control" type="text" id="serviceDescription"
+                                                    value="{{ service_description }}">
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="inputs">
+                                                <label>Service Price</label>
+                                                <input class="form-control" type="text" id="servicePrice"
+                                                    value="{{ service_price }}">
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="inputs">
+                                                <label>Service Status</label>
+                                                <input class="form-control" type="text" id="serviceStatus"
+                                                    value="{{ service_status }}">
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="inputs">
+                                                <label>Service Date</label>
+                                                <input class="form-control" type="text" id="serviceDate"
+                                                    value="{{ service_date }}">
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="inputs">
+                                                <label>Service Time</label>
+                                                <input class="form-control" type="text" id="serviceTime"
+                                                    value="{{ service_time }}">
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="inputs">
+                                                <label>Service Location</label>
+                                                <input class="form-control" type="text" id="serviceLocation"
+                                                    value="{{ service_location }}">
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-column mt-4 row">
+                                            <button class="px-3 btn btn-sm btn-primary" id="save"
+                                                data-id="{{ id }}">Save</button>
+                                        </div>
+                                    </form>
+
+                                </div>
+
+                                <!-- side information and buttons -->
+                                <div class="align-items-center align-content-center col-md-3 border-left mt-1">
+                                    <div class="d-flex flex-row align-items-center">
+                                        <h4 class="mr-1">00</h4><span class="strike-text">Points: {{ service_price
+                                            }}</span>
+                                    </div>
+
+                                    <div class="d-flex flex-column align-items-start mt-2">
+                                        <p>Status: Open</p>
+                                        <p>Responder: N/A if null</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/editService.js"></script>
