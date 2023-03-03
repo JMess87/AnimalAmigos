@@ -1,4 +1,4 @@
-const User = require('../models/Address');
+const Address = require('../models/Address');
 
 const addressdata = [
     {
@@ -18,11 +18,45 @@ const addressdata = [
         zip: '20735',
         country: 'US',
         user_id: '()',
+    },
+    {
+        ID: '()',
+        address: '219 Fox Hill Rd.',
+        city: 'Vilas',
+        state: 'NC',
+        zip: '28692',
+        country: 'US',
+        user_id: '()',
+    },
+    {
+        ID: '()',
+        address: '1035 Imagine Ln.',
+        city: 'Fredericksburg',
+        state: 'VA',
+        zip: '22401',
+        country: 'US',
+        user_id: '()',
+    },
+    {
+        ID: '()',
+        address: '915 Steed Rd.',
+        city: 'Ft. Washington',
+        state: 'MD',
+        zip: '20744',
+        country: 'US',
+        user_id: '()',
+    },
+    {
+        ID: '()',
+        address: '4809 Hamilton St.',
+        city: 'Hyattsville',
+        state: 'MD',
+        zip: '20781',
+        country: 'US',
+        user_id: '()',
     }
-
-
 ];
 
-const seedUser = () => User.bulkCreate(addressdata);
+const seedAddress = () => Address.bulkCreate(addressdata);
 
 module.exports = seedAddress;

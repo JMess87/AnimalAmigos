@@ -31,14 +31,16 @@ Address.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        user_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'user',
-                key: 'id',
-            },
+        // user_id: {
+        //     type: DataTypes.INTEGER,
+        //     allowNull: false,
+        //     FOREIGNKEY (user_id),
+        //     references: {
+        //         model: 'user',
+        //         key: 'ID',
+        //     },
         },
-    },
+
     {
         sequelize,
         timestamps: false,
