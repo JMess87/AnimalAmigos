@@ -14,14 +14,14 @@ const userdata = [
         last_name: 'McDonell',
         email: 'brian@gmail.com',
         password: 'brian',
-        phone_number: '5432342345'
+        phone_number: '5432342345',
     },
     {
         first_name: 'Pallavi',
         last_name: 'Talekar',
         email: 'talekar@gmail.com',
         password: 'pallu',
-        phone_number: '8762342345'
+        phone_number: '8762342345',
     },
     {
         first_name: 'Aditi',
@@ -29,20 +29,19 @@ const userdata = [
         email: 'pimple@gmail.com',
         password: 'aditi',
         phone_number: '7865940020'
-        password: 'aditi'
     },
     {
         first_name: 'Gabe',
         last_name: 'Perry',
         email: 'Gabe@gmail.com',
-        password: 'gabe'
-        phone_number: '6453526745'
+        password: 'gabe',
+        phone_number: '6453526745',
     },
     {
         first_name: 'Steve',
         last_name: 'Smith',
         email: 'Ssmith@gmail.com',
-        password: 'Steve'
+        password: 'Steve',
         phone_number: '9872342345'
     }
 
