@@ -16,7 +16,7 @@ Services.init(
             allowNull: false,
             references: {
                 model: 'user',
-                key: 'id',
+                key: 'ID',
             },
         },
         responder: {
@@ -24,7 +24,7 @@ Services.init(
             allowNull: true,
             references: {
                 model: 'user',
-                key: 'id',
+                key: 'ID',
             },
         },
         service_name: {
@@ -59,22 +59,22 @@ Services.init(
             type: DataTypes.STRING,
             allowNull: true,
         },
-        comments_id: {
-            type: DataTypes.INTEGER,
-            allowNull: true,
-            references: {
-                model: 'comments',
-                key: 'id',
-            },
-        },
-        likes_id: {
-            type: DataTypes.INTEGER,
-            allowNull: true,
-            references: {
-                model: 'likes',
-                key: 'id',
-            },
-        },
+        // comments_id: {
+        //     type: DataTypes.INTEGER,
+        //     allowNull: true,
+        //     references: {
+        //         model: 'comments',
+        //         key: 'id',
+        //     },
+        // },
+        // likes_id: {
+        //     type: DataTypes.INTEGER,
+        //     allowNull: true,
+        //     references: {
+        //         model: 'likes',
+        //         key: 'id',
+        //     },
+        // },
         user_id: {
             type: DataTypes.INTEGER,
             allowNull: true,
