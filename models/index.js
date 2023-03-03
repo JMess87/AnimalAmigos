@@ -1,21 +1,21 @@
-const Pet = require('./Pet');
+// const Pet = require('./Pet');
 const User = require('./User');
 const Wallet = require('./Wallet');
 const Address = require('./Address');
-const Comments = require('./Comments');
+// const Comments = require('./Comments');
 const Pictures = require('./Pictures');
-const Likes = require('./Likes');
+// const Likes = require('./Likes');
 const Services = require('./Services');
 const Security = require('./Security');
 
-User.hasMany(Pet, {
-    foreignKey: 'user_id',
-    onDelete: 'CASCADE',
-});
+// User.hasMany(Pet, {
+//     foreignKey: 'user_id',
+//     onDelete: 'CASCADE',
+// });
 
-Pet.belongsTo(User, {
-    foreignKey: 'user_id',
-});
+// Pet.belongsTo(User, {
+//     foreignKey: 'user_id',
+// });
 
 User.hasOne(Wallet, {
     foreignKey: 'user_id',
@@ -64,33 +64,33 @@ Pictures.belongsTo(User, {
     foreignKey: 'user_id',
 });
 
-User.hasMany(Comments, {
-    foreignKey: 'user_id',
-    onDelete: 'CASCADE',
-});
+// User.hasMany(Comments, {
+//     foreignKey: 'user_id',
+//     onDelete: 'CASCADE',
+// });
 
-Comments.belongsTo(User, {
-    foreignKey: 'user_id',
-});
+// Comments.belongsTo(User, {
+//     foreignKey: 'user_id',
+// });
 
-User.hasMany(Likes, {
-    foreignKey: 'user_id',
-    onDelete: 'CASCADE',
-});
+// User.hasMany(Likes, {
+//     foreignKey: 'user_id',
+//     onDelete: 'CASCADE',
+// });
 
-Likes.belongsTo(User, {
-    foreignKey: 'user_id',
-});
+// Likes.belongsTo(User, {
+//     foreignKey: 'user_id',
+// });
 
-Pictures.hasMany(Comments, {
-    foreignKey: 'pictures_id',
-    onDelete: 'CASCADE',
-});
+// Pictures.hasMany(Comments, {
+//     foreignKey: 'pictures_id',
+//     onDelete: 'CASCADE',
+// });
 
-Comments.belongsTo(Pictures, {
-    foreignKey: 'pictures_id',
-});
+// Comments.belongsTo(Pictures, {
+//     foreignKey: 'pictures_id',
+// });
 
 
-module.exports = { User, Pet, Wallet, Address, Comments, Pictures, Likes, Services };
+module.exports = { User, Wallet, Address, Pictures, Services };
 
