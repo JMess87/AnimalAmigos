@@ -1,10 +1,18 @@
 const router = require('express').Router();
 const Service = require('../../models/Services');
+const User = require('../../models/User');
 
 router.get('/', async (req, res) => {
     try {
-        const serviceData = await Service.findAll();
-        res.status(200).json(serviceData);
+        const servicesData = await Service.findAll({
+            include: [{ model: User }],
+        });
+
+        const services = servicesData.map((service) => service.get({ plain: true }));
+        res.render('services', {
+            services,
+            logged_in: req.session.logged_in
+        });
     } catch (err) {
         res.status(500).json(err);
     }
@@ -25,11 +33,10 @@ router.get('/:id', async (req, res) => {
     }
 });
 
-router.post('/', async (req, res) => {
+router.post('/addservice', async (req, res) => {
     try {
         const serviceData = await Service.create({
-            requester: req.body.requester,
-            responder: req.body.responder,
+            requester: req.session.user_id,
             service_name: req.body.service_name,
             service_description: req.body.service_description,
             service_price: req.body.service_price,
@@ -37,9 +44,18 @@ router.post('/', async (req, res) => {
             service_date: req.body.service_date,
             service_time: req.body.service_time,
             service_location: req.body.service_location,
-            service_limitations: req.body.service_limitations,
         });
-        res.status(200).json(serviceData);
+
+        const servicesData = await Service.findAll({
+            include: [{ model: User }],
+        });
+
+        const services = servicesData.map((service) => service.get({ plain: true }));
+
+        res.render('services', {
+            services,
+            logged_in: req.session.logged_in
+        });
     } catch (err) {
         res.status(400).json(err);
     }

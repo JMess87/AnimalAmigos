@@ -1,5 +1,7 @@
 const router = require('express').Router();
 const User = require('../models/User');
+const Wallet = require('../models/Wallet');
+const Services = require('../models/Services');
 
 router.get('/', async (req, res) => {
   res.render('homepage');
@@ -15,12 +17,21 @@ router.get('/signup', (req, res) => {
 
 router.get('/profile', async (req, res) => {
   try {
-    const userData = await User.findByPk(req.session.user_id);
+    const userData = await User.findByPk(req.session.user_id, {
+      include: [{
+        model: Wallet,
+        attributes: ['balance'],
+      },
+      {
+        model: Services
+      }]
+    });
     if (!userData) {
       res.status(404).json({ message: 'No user with this id!' });
       return;
     }
     const user = userData.get({ plain: true });
+
     res.render('profile', {
       ...user,
       logged_in: true
@@ -30,8 +41,8 @@ router.get('/profile', async (req, res) => {
   };
 });
 
-router.get('/service', (req, res) => {
-  res.json("Inside services");
+router.get('/addservice', (req, res) => {
+  res.render('addservice');
 });
 
 router.get('/wallet', (req, res) => {

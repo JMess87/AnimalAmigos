@@ -5,7 +5,7 @@ const walletRoutes = require('./walletRoutes');
 const uploadRoutes = require('./uploadRoutes');
 
 router.use('/user', userRoutes);
-router.use('/service', serviceRoutes);
+router.use('/services', serviceRoutes);
 router.use('/wallet', walletRoutes);
 router.use('/upload', uploadRoutes);
 
