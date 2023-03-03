@@ -65,7 +65,6 @@ router.post('/addservice', async (req, res) => {
 
 router.put('/:id', async (req, res) => {
     try {
-        console.log("+++++++++++++++++++++++++");
         const service = await Service.update(
             {
                 requester: req.session.user_id,

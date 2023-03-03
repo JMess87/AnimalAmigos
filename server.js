@@ -9,6 +9,7 @@ const uploader = require('./utils/upload');
 
 const sequelize = require('./config/connection');
 const multer = require('multer');
+
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 require('./models');
 
