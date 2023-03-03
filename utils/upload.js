@@ -17,8 +17,6 @@ const uploadImage = async (req, res) => {
         });
         console.log('after cloudinary upload', photo)
 
-        
-        res.status(200).JSON(photo);
         return await cloudinary.url(photo.public_id, {
             width: 400,
             quality: 'auto',
