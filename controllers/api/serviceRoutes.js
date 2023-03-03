@@ -37,6 +37,7 @@ router.post('/addservice', async (req, res) => {
     try {
         const serviceData = await Service.create({
             requester: req.session.user_id,
+            responder: req.session.user_id,
             service_name: req.body.service_name,
             service_description: req.body.service_description,
             service_price: req.body.service_price,
@@ -44,6 +45,7 @@ router.post('/addservice', async (req, res) => {
             service_date: req.body.service_date,
             service_time: req.body.service_time,
             service_location: req.body.service_location,
+            user_id: req.session.user_id,
         });
 
         const servicesData = await Service.findAll({
@@ -63,10 +65,11 @@ router.post('/addservice', async (req, res) => {
 
 router.put('/:id', async (req, res) => {
     try {
+        console.log("+++++++++++++++++++++++++");
         const service = await Service.update(
             {
-                requester: req.body.requester,
-                responder: req.body.responder,
+                requester: req.session.user_id,
+                responder: req.session.user_id,
                 service_name: req.body.service_name,
                 service_description: req.body.service_description,
                 service_price: req.body.service_price,
@@ -74,7 +77,7 @@ router.put('/:id', async (req, res) => {
                 service_date: req.body.service_date,
                 service_time: req.body.service_time,
                 service_location: req.body.service_location,
-                service_limitations: req.body.service_limitations,
+                user_id: req.session.user_id,
             },
             {
                 where: {
