@@ -54,4 +54,8 @@ router.get('/wallet', (req, res) => {
   res.json("Inside wallet");
 });
 
+router.get('/upload', (req, res) => {
+  res.render('upload');
+});
+
 module.exports = router;

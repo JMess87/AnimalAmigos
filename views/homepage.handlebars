@@ -1,2 +1,47 @@
+<body style="background-color: #CFD9DC">
+    <header class="landing-background">
+        <!-- navbar with responsive display - collapse toggle button -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <a class="navbar-brand" href="#">Animal Amigos</a>
+                    <div class="container d-flex justify-content-end">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Team</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-
+    <!-- main logo, description, button and background image (need to relink image path in handlebar) -->
+    <main class="landing-background">
+        <div class="card mx-auto text-center" style="width: 45rem;" id="landing-card">
+            <img src="../assets/Animal-circle.png" class="card-img" alt="landing-bg-img" id="landing-bg-img">
+            <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center mt-5">
+                <p class="card-title" id="landing-title">Amimal Amigos</p>
+                <p class="card-text mb-4" id="landing-description">Join our furmily today to meet more friends and
+                    experience
+                    pet-sitting services!</p>
+                <section class="container text-center mt-3">
+                    <button type="button" class="btn btn-secondary me-3" id="btn-signup">Sign-up</button>
+                    <button type="button" class="btn btn-secondary ms-3" id="btn-login">Log-in</button>
+                </section>
+            </div>
+        </div>
+    </main>
+</body>

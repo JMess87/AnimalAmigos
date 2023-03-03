@@ -18,59 +18,37 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
-<body id="landing-background">
-
-  <header>
-
+<body style="background-color: #CFD9DC">
+  <header class="landing-background">
+    <!-- navbar with responsive display - collapse toggle button -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Animal Amigos</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
-          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Team</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled">Contact</a>
-            </li>
-          </ul>
-
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <a class="navbar-brand" href="#">Animal Amigos</a>
+          <div class="container d-flex justify-content-end">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
-
-    <!-- <nav class="navbar bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" id="nav-text">Animal Amigos</a>
-        <ul class="nav d-flex justify-content-end">
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Team</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </nav> -->
   </header>
 
-  <main>
-
-    <!-- <div class="row px-0 justify-content-center mt-3"> -->
-
-
-
-
+  <!-- main logo, description, button and background image (need to relink image path in handlebar) -->
+  <main class="landing-background">
     <div class="card mx-auto text-center" style="width: 45rem;" id="landing-card">
       <img src="../assets/Animal-circle.png" class="card-img" alt="landing-bg-img" id="landing-bg-img">
       <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center mt-5">
@@ -78,19 +56,80 @@
         <p class="card-text mb-4" id="landing-description">Join our furmily today to meet more friends and experience
           pet-sitting services!</p>
         <section class="container text-center mt-3">
-          <button type="button" class="btn btn-secondary me-3" id="btn-signup">Sign-up</button>
+          <button type="button" class="btn btn-secondary me-3" id="btn-signup" data-bs-toggle="modal"
+            data-bs-target="#SignUpModal">Sign-up</button>
           <button type="button" class="btn btn-secondary ms-3" id="btn-login">Log-in</button>
         </section>
       </div>
     </div>
-
-
-
-
-    <!-- </div> -->
-
-
   </main>
+
+
+  <!-- Signup Modal -->
+  <div class="modal" id="SignUpModal">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+
+        <!-- Modal body -->
+        <div class="modal-body">
+
+          <div class="d-flex justify-content-center row">
+            <div class="col-md-10">
+              <div class="row p-2 bg-white">
+
+                <div class="col-md-6 mt-1 text-start">
+                  <h5>Sign up for a free account</h5>
+
+                  <!-- form input box to create or update services-->
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Post title</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput"
+                      placeholder="Example input placeholder">
+                  </div>
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label">Description</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2"
+                      placeholder="Another input placeholder">
+                  </div>
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label">Price</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2"
+                      placeholder="Another input placeholder">
+                  </div>
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label">Location</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2"
+                      placeholder="Another input placeholder">
+                  </div>
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label">Date and time</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2"
+                      placeholder="Another input placeholder">
+                  </div>
+
+                </div>
+
+                <!-- side information and buttons -->
+                <div class="align-items-center align-content-center col-md-3 border-left mt-1">
+
+                </div>
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button class="btn btn-primary btn-sm mt-2" type="button">Save</button>
+                <button class="btn btn-primary btn-sm mt-2" type="button" data-bs-dismiss="modal">Cancel</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
 
 
   <!-- <script src="/assets/js/index.js"></script> -->
