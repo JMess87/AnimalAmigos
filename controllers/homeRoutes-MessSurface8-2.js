@@ -47,15 +47,15 @@ router.get('/profile', withAuth, async (req, res) => {
   };
 });
 
-router.get('/addservice', withAuth ,async (req, res) => {
+router.get('/addservice', (req, res) => {
   res.render('addservice');
 });
 
-router.get('/wallet', withAuth, async (req, res) => {
+router.get('/wallet', (req, res) => {
   res.json("Inside wallet");
 });
 
-router.get('/upload', withAuth ,async (req, res) => {
+router.get('/upload', (req, res) => {
   res.render('upload');
 });
 
