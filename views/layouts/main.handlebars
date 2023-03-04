@@ -1,45 +1,3 @@
-{{!--
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animal Amigos</title>
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-</head>
-
-<body>
-    <header>
-        <div>
-            <h1>Animal Amigos</h1>
-        </div>
-
-        <div>
-            <nav class="header-nav">
-                {{#if logged_in}}
-                <a id="logout" href="/">Logout</p>
-                    {{else}}
-                    <a href="/login">Login</a>
-                    {{/if}}
-            </nav>
-        </div>
-    </header>
-
-    <main>
-        <div class="pets">
-            {{{ body }}}
-        </div>
-    </main>
-
-    {{#if logged_in}}
-    <script src="/js/logout.js"></script>
-    {{/if}}
-</body>
-
-</html> --}}
-
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -58,50 +16,45 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&family=Solway:wght@300;400;500;800&display=swap"
         rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/114cf67037.js" crossorigin="anonymous"></script>
 </head>
 
-{{!--
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Animal Amigos</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.3/flatly/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
-    <link rel="stylesheet" href="/public/css/style.css" />
-</head> --}}
 
 <!-- NAVIGATION -->
 
 <header>
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand">Animal Amigos</a>
+            {{#if logged_in}}
+            <a class="navbar-brand" href="/api/services">Animal Amigos</a>
+            {{else}}
+            <a class="navbar-brand" href="/">Animal Amigos</a>
+            {{/if}}
             <ul class="nav justify-content-end">
                 {{#if logged_in}}
                 <li class="nav-item">
+                    {{!-- show profile image aside 'profile' text when logged in --}}
+                    <img src="../assets/Dog.jpg" width="50" class="rounded-circle" id="img-profile-nav-round">
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="/profile">Profile</a>
+                </li>
+                {{!-- <li class="nav-item">
+                    <a class="nav-link" href="/addService">Service Request</a>
+                </li> --}}
+                <li class="nav-item">
+                    <a class="nav-link" href="/api/services">Dashboard</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" id="logout" href="/">Logout</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/addService">Add Service</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/api/services">Dashboard</a>
-                </li>
                 {{else}}
-                <a href="/login">Login</a>
+                {{!-- <a href="/login">Login</a> --}}
                 {{/if}}
             </ul>
         </div>
     </nav>
 </header>
-
-
 
 
 <body>

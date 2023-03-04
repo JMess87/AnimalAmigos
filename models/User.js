@@ -36,16 +36,22 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    phone_number: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    profile_picture: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    }
   },
   {
     hooks: {
       beforeCreate: async (newUserData) => {
-        console.log("BEfore USer Create ******************* :");
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
         return newUserData;
       },
       beforeUpdate: async (updatedUserData) => {
-        console.log("BEfore USer Update ******************* :");
         updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
         return updatedUserData;
       },

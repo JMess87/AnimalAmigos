@@ -30,18 +30,18 @@ Address.init(
         country: {
             type: DataTypes.STRING,
             allowNull: false,
+        
         },
         // user_id: {
         //     type: DataTypes.INTEGER,
-        //     allowNull: false,
-        //     FOREIGNKEY (user_id),
+        //     allowNull: true,
         //     references: {
         //         model: 'user',
-        //         key: 'ID',
+        //         key: 'id',
         //     },
         },
-
-    {
+    
+        {
         sequelize,
         timestamps: false,
         freezeTableName: true,
