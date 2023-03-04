@@ -108,10 +108,12 @@ body {
 #service-title {
     font-size: 1.5rem;
     font-weight: 700;
+    color: var(--landing-title-color);
 }
 
 #service-description {
     font-weight: 400;
+    color: var(--landing-title-color);
 }
 
 #service-user-location-text {
@@ -186,4 +188,9 @@ body {
     background-color: var(--brown-button);
     border: var(--brown-button);
     width: 9rem;
+}
+
+.serviceImage {
+    object-fit: cover;
+    height: 100%;
 }
