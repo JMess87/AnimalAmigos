@@ -8,6 +8,13 @@
 
 ## Project Description
 
+
+
+## Github and Heroku Links
+
++ Git Hub - https://github.com/JMess87/AnimalAmigos
++ Heroku - 
+
 ### Project Requirements
 + Use Node.js and Express.js to create a RESTful API.
 + Use Handlebars.js as the template engine.
