@@ -100,6 +100,11 @@ body {
     font-weight: 700;
 }
 
+.post-date-text {
+    color: var(--cat-grey);
+    font-weight: 300;
+}
+
 #post-date-text {
     color: var(--cat-grey);
     font-weight: 300;
@@ -193,4 +198,15 @@ body {
 .serviceImage {
     object-fit: cover;
     height: 100%;
+}
+
+.proImage {
+    object-fit: cover;
+    height: 12rem;
+    width: 12rem;
+
+}
+
+.petPhotoCard {
+    border: 0rem;
 }
