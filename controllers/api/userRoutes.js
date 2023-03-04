@@ -8,6 +8,8 @@ const bcrypt = require('bcrypt');
 router.post('/signup', async (req, res) => {
   try {
     const userData = await User.create({
+
+      profile_pic: req.body.profile_pic,
       first_name: req.body.first_name,
       last_name: req.body.last_name,
       email: req.body.email,
@@ -36,7 +38,7 @@ router.post('/signup', async (req, res) => {
       ...user,
       logged_in: true
     });
-    
+
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -45,53 +47,54 @@ router.post('/signup', async (req, res) => {
 
 router.put('/:id', async (req, res) => {
   try {
-      const user = await User.update(
-          {
-            first_name: req.body.first_name,
-            last_name: req.body.last_name,
-            email: req.body.email,
-            password: req.body.password,
-            phone_number: req.body.phone_number,
-          },
-          {
-              where: {
-                  id: req.params.id,
-            },
-            individualHooks: true
-          }
-      );
+    const user = await User.update(
+      {
+        profile_pic: req.body.profile_pic,
+        first_name: req.body.first_name,
+        last_name: req.body.last_name,
+        email: req.body.email,
+        password: req.body.password,
+        phone_number: req.body.phone_number,
+      },
+      {
+        where: {
+          id: req.params.id,
+        },
+        individualHooks: true
+      }
+    );
 
-      await Address.create({
-        address: req.body.address,
-        city: req.body.city,
-        state: req.body.state,
-        zip: req.body.zip,
-        country: req.body.country,
-        user_id: req.session.user_id,
-      });
+    await Address.create({
+      address: req.body.address,
+      city: req.body.city,
+      state: req.body.state,
+      zip: req.body.zip,
+      country: req.body.country,
+      user_id: req.session.user_id,
+    });
 
-      res.status(200).json(user);
+    res.status(200).json(user);
   } catch (err) {
-      res.status(500).json(err);
+    res.status(500).json(err);
   }
 });
 
 router.delete('/:id', async (req, res) => {
   try {
-      const userData = await User.destroy({
-          where: {
-              id: req.params.id
-          }
-      });
-
-      if (!userData) {
-          res.status(404).json({ message: 'No user found with this id!' });
-          return;
+    const userData = await User.destroy({
+      where: {
+        id: req.params.id
       }
+    });
 
-      res.status(200).json(userData);
+    if (!userData) {
+      res.status(404).json({ message: 'No user found with this id!' });
+      return;
+    }
+
+    res.status(200).json(userData);
   } catch (err) {
-      res.status(500).json(err);
+    res.status(500).json(err);
   }
 });
 
@@ -117,7 +120,7 @@ router.post('/login', async (req, res) => {
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
-      
+
       res.status(200).json({ user: userData, message: 'You are now logged in!' });
     });
 

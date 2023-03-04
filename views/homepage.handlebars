@@ -37,9 +37,16 @@
                                 <div class="col-lg-12 mt-1 text-start">
                                     <h5 class="signup-title mb-4">Sign up for a free account</h5>
                                     <!-- form input box to create or update services-->
+
+
+                                    <form action="/api/upload/" method="post" enctype="multipart/form-data">
+                                        <input type="file" id="proFile" name="file">
+                                        <input type="submit" id="submitProPic">
+                                    </form>
+                                    <img>
                                     <form class="signup-form row g-2 signup-text">
                                         <div class="col-md-6">
-                                            <label for="inputEmail4" class="form-label">First Name</label>
+                                            <label for="inputEmail4" class="form-label">First Name????????</label>
                                             <input type="text" class="form-control" id="firstName">
                                         </div>
                                         <div class="col-md-6">
@@ -139,5 +146,5 @@
     <!-- SignUp Modal End -->
 
 
-    <script src="./js/signup.js"></script>
+    <script src="../public/js/signup.js"></script>
 </body>

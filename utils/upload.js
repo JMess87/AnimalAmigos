@@ -3,6 +3,7 @@ const path = require('path');
 const applicationDirectory = path.dirname(require.main.filename);
 console.log("applicationDirectory", applicationDirectory)
 const util = require('node:util');
+var url = null
 
 //cloudinary returns a promise
 //this function returns a URL string 
@@ -16,6 +17,8 @@ const uploadImage = async (req, res) => {
             unique_filename: false
         });
         console.log('after cloudinary upload', photo)
+        url = await cloudinary.url(photo.secure_url);
+
 
         return await cloudinary.url(photo.public_id, {
             width: 400,
@@ -30,5 +33,8 @@ const uploadImage = async (req, res) => {
     }
 };
 
+function photoURL() {
+    return url;
+}
 
-module.exports = { uploadImage };
+module.exports = { uploadImage, photoURL };
