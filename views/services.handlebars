@@ -4,12 +4,20 @@
         Request</button>
 </section>
 
-<section class="container-fluid position-relative">
-    <div class="row d-flex justify-content-center mt-3">
+{{!-- <section class="container-fluid position-relative">
+    <div class="row d-flex justify-content-center mt-3"> --}}
 
-        {{#each services as |service|}}
-        {{> service-details}}
-        {{/each}}
+        <div class="container mt-5 mb-5">
 
-    </div>
+            <div class="d-flex justify-content-center row text-start">
+                <div class="col-md-10">
+
+                    {{#each services as |service|}}
+                    {{> service-details}}
+                    {{/each}}
+
+                </div>
+            </div>
+        </div>
+
 </section>

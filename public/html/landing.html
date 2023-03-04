@@ -58,7 +58,8 @@
         <section class="container text-center mt-3">
           <button type="button" class="btn btn-secondary me-3" id="btn-signup" data-bs-toggle="modal"
             data-bs-target="#SignUpModal">Sign-up</button>
-          <button type="button" class="btn btn-secondary ms-3" id="btn-login">Log-in</button>
+          <button type="button" class="btn btn-secondary ms-3" id="btn-login" data-bs-toggle="modal"
+            data-bs-target="#logInModal">Log-in</button>
         </section>
       </div>
     </div>
@@ -178,7 +179,47 @@
       </div>
     </div>
   </div>
+  <!-- Sign-up modal end -->
 
+
+  <!-- Log-in Modal -->
+  <div class="modal" id="logInModal">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="d-flex justify-content-center row">
+            <div class="col-md-10">
+              <div class="row p-2 bg-white">
+                <div class="col-xl-12 mt-1 text-start">
+                  <h5 class="signup-title mb-4">Sign in to your account</h5>
+
+                  <!-- form input box to create or update services-->
+                  <form class="row g-2 signup-text">
+                    <div class="col-sm-12">
+                      <label for="inputEmail4" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="email">
+                    </div>
+                    <div class="col-sm-12">
+                      <label for="inputPassword4" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="password">
+                    </div>
+
+                    <div class="d-grid gap-2 d-md-block mt-4 mb-4">
+                      <button class="btn btn-primary mt-2 me-3 btn-orange" type="submit">Submit</button>
+                      <button class="btn btn-primary mt-2 btn-brown" type="button"
+                        data-bs-dismiss="modal">Cancel</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Log-in modal end -->
 
 
 
