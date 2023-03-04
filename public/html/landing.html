@@ -67,7 +67,7 @@
 
   <!-- Signup Modal -->
   <div class="modal" id="SignUpModal">
-    <div class="modal-dialog modal-xl">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content">
 
         <!-- Modal body -->
@@ -77,35 +77,86 @@
             <div class="col-md-10">
               <div class="row p-2 bg-white">
 
-                <div class="col-md-6 mt-1 text-start">
-                  <h5>Sign up for a free account</h5>
+                <div class="col-xl-12 mt-1 text-start">
+                  <h5 class="signup-title mb-4">Sign up for a free account</h5>
 
                   <!-- form input box to create or update services-->
-                  <div class="mb-3">
-                    <label for="formGroupExampleInput" class="form-label">Post title</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput"
-                      placeholder="Example input placeholder">
-                  </div>
-                  <div class="mb-3">
-                    <label for="formGroupExampleInput2" class="form-label">Description</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2"
-                      placeholder="Another input placeholder">
-                  </div>
-                  <div class="mb-3">
-                    <label for="formGroupExampleInput2" class="form-label">Price</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2"
-                      placeholder="Another input placeholder">
-                  </div>
-                  <div class="mb-3">
-                    <label for="formGroupExampleInput2" class="form-label">Location</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2"
-                      placeholder="Another input placeholder">
-                  </div>
-                  <div class="mb-3">
-                    <label for="formGroupExampleInput2" class="form-label">Date and time</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2"
-                      placeholder="Another input placeholder">
-                  </div>
+                  <form class="row g-2 signup-text">
+                    <div class="col-6">
+                      <label for="inputEmail4" class="form-label">First Name</label>
+                      <input type="email" class="form-control" id="firstName">
+                    </div>
+                    <div class="col-6">
+                      <label for="inputPassword4" class="form-label">Last Name</label>
+                      <input type="password" class="form-control" id="lastName">
+                    </div>
+                    <div class="col-sm-6">
+                      <label for="inputEmail4" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="email">
+                    </div>
+                    <div class="col-sm-6">
+                      <label for="inputPassword4" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="password">
+                    </div>
+                    <div class="col-md-12">
+                      <label for="inputPassword4" class="form-label">Phone Number</label>
+                      <input type="password" class="form-control" id="phoneNumber">
+                    </div>
+
+                    <div class="col-md-12">
+                      <div class="inputs">
+                        <label class="form-label">Security Question 1</label>
+                        <select class="form-control form-select" id="question1" placeholder="Choose a question*">
+                          <option value="What is your mothers maiden name?">What is your mothers maiden name?</option>
+                          <option value="What was the color of your first car?">What was the color of your first car?
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <label for="inputAddress2" class="form-label">Answer 1</label>
+                      <input type="text" class="form-control" id="answer1"
+                        placeholder="Type answer for security question 1...">
+                    </div>
+
+                    <div class="col-md-12">
+                      <div class="inputs">
+                        <label class="form-label">Security Question 2</label>
+                        <select class="form-control form-select" id="question2" placeholder="Choose a question*">
+                          <option value="What is your mothers maiden name?">What is your paternal
+                            grandfathers middle name?</option>
+                          <option value="What was the color of your first car?">What is your favorite food?
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <label for="inputAddress2" class="form-label">Answer 2</label>
+                      <input type="text" class="form-control" id="answer2"
+                        placeholder="Type answer for security question 2...">
+                    </div>
+
+                    <div class="col-md-12">
+                      <div class="inputs">
+                        <label class="form-label">Security Question 3</label>
+                        <select class="form-control form-select" id="question3" placeholder="Choose a question*">
+                          <option value="What is your mothers maiden name?">What is your favorite ice cream flavor?
+                          </option>
+                          <option value="What was the color of your first car?">What is your favorite sport?
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <label for="inputAddress2" class="form-label">Answer 3</label>
+                      <input type="text" class="form-control" id="answer3"
+                        placeholder="Type answer for security question 3...">
+                    </div>
+
+                    <!-- <div class="col-12">
+                      <button type="submit" class="btn btn-primary">Sign in</button>
+                    </div> -->
+                  </form>
 
                 </div>
 
@@ -116,10 +167,10 @@
               </div>
 
               <!-- Modal footer -->
-              <div class="modal-footer">
-                <button class="btn btn-primary btn-sm mt-2" type="button">Save</button>
-                <button class="btn btn-primary btn-sm mt-2" type="button" data-bs-dismiss="modal">Cancel</button>
-              </div>
+              <!-- <div class="modal-footer">
+                <button class="btn btn-primary mt-2" type="submit">Register</button>
+                <button class="btn btn-primary mt-2" type="button" data-bs-dismiss="modal">Cancel</button>
+              </div> -->
 
             </div>
           </div>
@@ -131,7 +182,7 @@
 
 
 
-
+  <script src="./js/signup.js"></script>
   <!-- <script src="/assets/js/index.js"></script> -->
 </body>
 
