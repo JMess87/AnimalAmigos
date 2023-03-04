@@ -143,3 +143,47 @@ body {
     color: var(--orange-button);
     font-weight: 600;
 }
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    position: relative;
+    width: max-content
+}
+
+.content img {
+    display: block;
+}
+
+.content .fa-camera {
+    position: absolute;
+    bottom: 87.5%;
+    right: 42.5%;
+    color: white;
+}
+
+.signup-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--landing-title-color);
+}
+
+.signup-text {
+    font-size: 0.75rem;
+    color: var(--landing-title-color);
+}
+
+.btn-orange {
+    background-color: var(--orange-button);
+    border: var(--orange-button);
+    width: 9rem;
+}
+
+.btn-brown {
+    background-color: var(--brown-button);
+    border: var(--brown-button);
+    width: 9rem;
+}
