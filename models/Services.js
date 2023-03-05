@@ -11,6 +11,12 @@ Services.init(
             primaryKey: true,
             autoIncrement: true,
         },
+
+        service_picture: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+
         requester: {
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -29,7 +35,7 @@ Services.init(
         },
         service_name: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         service_description: {
             type: DataTypes.STRING,
