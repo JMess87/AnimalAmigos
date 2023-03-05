@@ -38,7 +38,7 @@ router.post('/addservice', async (req, res) => {
         const service = await Service.create({
             requester: req.session.user_id,
             responder: req.session.user_id,
-            responder_first_name: "TBD",
+            responder_first_name: " ",
             responder_last_name: " ",
             service_name: req.body.service_name,
             service_description: req.body.service_description,
