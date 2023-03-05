@@ -100,6 +100,11 @@ body {
     font-weight: 700;
 }
 
+.post-date-text {
+    color: var(--cat-grey);
+    font-weight: 300;
+}
+
 #post-date-text {
     color: var(--cat-grey);
     font-weight: 300;
@@ -108,10 +113,12 @@ body {
 #service-title {
     font-size: 1.5rem;
     font-weight: 700;
+    color: var(--landing-title-color);
 }
 
 #service-description {
     font-weight: 400;
+    color: var(--landing-title-color);
 }
 
 #service-user-location-text {
@@ -186,4 +193,20 @@ body {
     background-color: var(--brown-button);
     border: var(--brown-button);
     width: 9rem;
+}
+
+.serviceImage {
+    object-fit: cover;
+    height: 100%;
+}
+
+.proImage {
+    object-fit: cover;
+    height: 12rem;
+    width: 12rem;
+
+}
+
+.petPhotoCard {
+    border: 0rem;
 }

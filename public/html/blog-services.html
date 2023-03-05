@@ -50,7 +50,7 @@
             </div> -->
 
             <!-- The Modal -->
-            <div class="modal" id="myModal">
+            <div class="modal" id="editModal">
                 <div class="modal-dialog modal-xl">
                     <div class="modal-content">
 
@@ -136,9 +136,8 @@
             </div>
         </section>
 
-        <section class="container-fluid position-relative">
+        <!-- <section class="container-fluid position-relative">
             <div class="row d-flex justify-content-center mt-3">
-
                 <div class="card mb-3" style="width: 60rem;">
                     <a href="https://placeholder.com">
                         <img src="https://via.placeholder.com/200x75" class="card-img-top mt-3" alt="placeholder-img">
@@ -158,30 +157,96 @@
                         <a href="#" class="btn btn-primary">Contact</a>
                     </div>
                 </div>
-
-                <div class="card mb-3" style="width: 60rem;">
-                    <a href="https://placeholder.com">
-                        <img src="https://via.placeholder.com/200x75" class="card-img-top mt-3" alt="placeholder-img">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">Post title</h5>
-                        <p class="card-text">Description</p>
-                        <p class="card-text">By User in location name</p>
-                        <p class="card-text">Post date</p>
-                        <p class="card-text">Likes: Number</p>
-                        <p class="card-text">Points (per day): Number</p>
-                        <p class="card-text">Status: N/A</p>
-                        <p class="card-text">Responder: Name</p>
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
-                            Details
-                        </button>
-                        <a href="#" class="btn btn-primary">Contact</a>
-                    </div>
-                </div>
-
-
             </div>
-        </section>
+        </section> -->
+
+        <!-- CARDS SECTION START-->
+        <div class="container mt-5 mb-5">
+
+            <div class="d-flex justify-content-center row text-start">
+                <div class="col-md-10">
+
+                    <!-- CARD 1 - START-->
+                    <div class="row p-0 bg-white border rounded mb-3">
+
+                        <div class="col-md-3 mt-3 ">
+                            <img class="img-fluid img-responsive rounded img-service-square" src="../assets/Cat.jpg">
+                        </div>
+
+                        <div class="col-md-6 text-start mt-3">
+                            <p class="mb-2" id="post-date-text">Post date</p>
+                            <h5 class="mb-3" id="service-title">Cat feeding</h5>
+                            <p class="mb-3" id="service-description">Content to be added based on service
+                                description.</p>
+                            <p id="service-user-location-text">By User in location name</p>
+                        </div>
+
+                        <div class="align-items-center align-content-center col-md-2 mt-3">
+                            <div class="d-flex flex-row align-items-center service-points">
+                                <h4 class="me-2">40</h4><span class="strike-text">Points</span>
+                            </div>
+                            <div class="d-flex flex-column align-items-start mt-2">
+                                <p>Status: Open</p>
+                                <p>Requester: Name</p>
+                                <p>Responder: N/A</p>
+                            </div>
+                        </div>
+
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <button class="btn btn-primary me-md-2" type="button" style="display:none">Book</button>
+                            <button class="btn btn-primary" type="button" style="display:none">Deny</button>
+                            <button class="btn btn-primary" type="button" style="display:none">Finish</button>
+                            <button class="btn btn-primary" type="button" style="display:none">Validate</button>
+                            <!-- <button class="btn btn-primary profile-button" type="button" data-bs-toggle="modal"
+                                data-bs-target="#editModal">Edit</button> -->
+                            <button class="btn btn-primary profile-button" type="button">Accept</button>
+                        </div>
+
+                    </div>
+                    <!-- CARD 1 - END -->
+
+                    <!-- CARD Reformat -->
+                    <div class="card mb-4">
+                        <div class="row g-0">
+                            <div class="col-md-3 card">
+                                <img class="card-img img-fluid serviceImage" src="../assets/Dog.jpg">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card-body mt-2 ms-2">
+                                    <p class="mb-2" id="post-date-text">Post date</p>
+                                    <h5 class="mb-3" id="service-title">Cat feeding</h5>
+                                    <p class="mb-3" id="service-description">Content to be added based on service
+                                        description. Content to be added based on service
+                                        description.</p>
+                                    <p id="service-user-location-text">By User in location name</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card-body mt-3">
+                                    <h4 class="service-points">40 <span class="fs-6">Points</span></h4>
+                                    <p class="mb-2 fw-bold" id="post-date-text">Status: Open</p>
+                                    <p class="mb-2" id="post-date-text">Requester: Jennilee</p>
+                                    <p class="mb-2" id="post-date-text">Responder: N/A</p>
+                                    <div class="d-grid gap-2 d-md-flex mt-3 mb-3">
+                                        <button class="btn btn-primary profile-button" type="button">Accept</button>
+                                        <button class="btn btn-primary me-md-2 profile-button"
+                                            type="button">Pay</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CARD Reformat End -->
+
+                    
+
+
+
+                </div>
+            </div>
+        </div>
+        <!-- CARDS SECTION END -->
+
 
 
 
