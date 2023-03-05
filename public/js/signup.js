@@ -16,6 +16,7 @@ const signupFormHandler = async (event) => {
     const answer2 = document.querySelector('#answer2').value.trim();
     const question3 = document.querySelector('#question3').value.trim();
     const answer3 = document.querySelector('#answer3').value.trim();
+    const profile_pic = 'placeholder';
 
     // let is_owner;
 
@@ -30,7 +31,8 @@ const signupFormHandler = async (event) => {
     if (email && password) {
         const response = await fetch('/api/user/signup', {
             method: 'POST',
-            body: JSON.stringify({ profile_pic, first_name, last_name, email, password, phone_number, question1, answer1, question2, answer2, question3, answer3 }),
+
+            body: JSON.stringify({ first_name, last_name, email, password, phone_number, profile_pic, question1, answer1, question2, answer2, question3, answer3 }),
             headers: { 'Content-Type': 'application/json' },
         });
 

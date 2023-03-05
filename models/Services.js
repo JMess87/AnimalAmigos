@@ -11,18 +11,16 @@ Services.init(
             primaryKey: true,
             autoIncrement: true,
         },
-
         service_picture: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
-
         requester: {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
                 model: 'user',
-                key: 'ID',
+                key: 'id',
             },
         },
         responder: {
@@ -30,8 +28,16 @@ Services.init(
             allowNull: true,
             references: {
                 model: 'user',
-                key: 'ID',
+                key: 'id',
             },
+        },
+        responder_first_name: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        responder_last_name: {
+            type: DataTypes.STRING,
+            allowNull: true,
         },
         service_name: {
             type: DataTypes.STRING,
