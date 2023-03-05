@@ -16,10 +16,12 @@ require('./models');
 require('dotenv').config();
 const cloudinary = require('cloudinary').v2;
 
-
-
 const app = express();
 const PORT = process.env.PORT || 3001;
+
+
+
+
 
 // Set up Handlebars.js engine with custom helpers
 const hbs = exphbs.create({ helpers });

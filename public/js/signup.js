@@ -1,6 +1,10 @@
+const upload = require('../../utils/upload')
+
+
 const signupFormHandler = async (event) => {
     event.preventDefault();
 
+    const profile_pic = document.querySelector('#profile_pic').value.trim();
     const first_name = document.querySelector('#firstName').value.trim();
     const last_name = document.querySelector('#lastName').value.trim();
     const email = document.querySelector('#email').value.trim();
@@ -21,12 +25,13 @@ const signupFormHandler = async (event) => {
     // } else {
     //     is_owner = false;
     // }
-    
+
     // console.log("******************");
 
     if (email && password) {
         const response = await fetch('/api/user/signup', {
             method: 'POST',
+
             body: JSON.stringify({ first_name, last_name, email, password, phone_number, profile_pic, question1, answer1, question2, answer2, question3, answer3 }),
             headers: { 'Content-Type': 'application/json' },
         });
@@ -42,4 +47,3 @@ const signupFormHandler = async (event) => {
 document
     .querySelector('.signup-form')
     .addEventListener('submit', signupFormHandler);
-
