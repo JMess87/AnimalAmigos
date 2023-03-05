@@ -3,7 +3,6 @@ const Service = require('../models/Services');
 const servicedata = [
     {
         requester: 1,
-        responder: 1,
         service_picture: 'http://res.cloudinary.com/dx6nv04ky/image/upload/v1677874690/dog_jump.jpg',
         service_name: 'Dog Agility',
         service_description: 'Dog tricks and training',
@@ -17,8 +16,8 @@ const servicedata = [
     },
     {
         requester: 2,
-        responder: 2,
         service_picture: 'http://res.cloudinary.com/dx6nv04ky/image/upload/v1677874633/Cat_sitting.jpgSitting',
+        service_name: 'Cat Sitting',
         service_description: 'cat sitting for you',
         service_price: '20',
         service_status: 'active',
@@ -29,8 +28,7 @@ const servicedata = [
         user_id: 2,
     },
     {
-        requester: 1,
-        responder: 1,
+        requester: 3,
         service_picture: 'http://res.cloudinary.com/dx6nv04ky/image/upload/v1677874717/dogleash.jpg',
         service_name: 'Solo Dog Walking',
         service_description: 'Dog Walking 30 min',
@@ -43,8 +41,7 @@ const servicedata = [
         user_id: 3,
     },
     {
-        requester: 1,
-        responder: 1,
+        requester: 4,
         service_picture: 'http://res.cloudinary.com/dx6nv04ky/image/upload/v1677874776/walk_lizard.jpg',
         service_name: 'Reptile Walking',
         service_description: 'Lizards need love too! Reptile walking service, fast and friendly.',
@@ -57,8 +54,7 @@ const servicedata = [
         user_id: 4,
     },
     {
-        requester: 1,
-        responder: 1,
+        requester: 5,
         service_picture: 'http://res.cloudinary.com/dx6nv04ky/image/upload/v1677874812/walking_dogs.jpg',
         service_name: 'Dog Walking - Multiple',
         service_description: 'Can walk up to 5 dogs',
@@ -71,8 +67,7 @@ const servicedata = [
         user_id: 5,
     },
     {
-        requester: 1,
-        responder: 1,
+        requester: 6,
         service_picture: 'http://res.cloudinary.com/dx6nv04ky/image/upload/v1677874745/hamster_cardio.jpg',
         service_name: 'Animal Cardio',
         service_description: 'Will wear out your pet. Guaranteed',

@@ -3,6 +3,9 @@ const Service = require('../../models/Services');
 const User = require('../../models/User');
 
 router.get('/', async (req, res) => {
+
+    // console.log("##############@@@@@@@@@@@@@@@@@@ : " + req.session.user_id);
+
     try {
         const servicesData = await Service.findAll({
             include: [{ model: User }],
@@ -35,9 +38,10 @@ router.get('/:id', async (req, res) => {
 
 router.post('/addservice', async (req, res) => {
     try {
-        const serviceData = await Service.create({
+        console.log("##############@@@@@@@@@@@@@@@@@@");
+
+        const service = await Service.create({
             requester: req.session.user_id,
-            responder: req.session.user_id,
             service_name: req.body.service_name,
             service_description: req.body.service_description,
             service_price: req.body.service_price,
@@ -60,6 +64,38 @@ router.post('/addservice', async (req, res) => {
         });
     } catch (err) {
         res.status(400).json(err);
+    }
+});
+
+router.post('/currentService/:id', async (req, res) => {
+    try {
+        const currentUser = req.session.user_id;
+
+        const userData = await User.findOne({ where: { id: currentUser } });
+        if (!userData) {
+            res
+                .status(400)
+                .json({ message: 'Incorrect email or password, please try again' });
+            return;
+        }
+
+        const user = userData.get({ plain: true });
+
+        const service = await Service.update(
+            {
+                responder: currentUser,
+                responder_first_name: user.first_name,
+                responder_last_name: user.last_name,
+            },
+            {
+                where: {
+                    id: req.params.id,
+                },
+            }
+        );
+        res.status(200).json(user);
+    } catch (err) {
+        res.status(500).json(err);
     }
 });
 
