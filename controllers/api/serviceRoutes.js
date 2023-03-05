@@ -3,9 +3,6 @@ const Service = require('../../models/Services');
 const User = require('../../models/User');
 
 router.get('/', async (req, res) => {
-
-    // console.log("##############@@@@@@@@@@@@@@@@@@ : " + req.session.user_id);
-
     try {
         const servicesData = await Service.findAll({
             include: [{ model: User }],
@@ -38,10 +35,11 @@ router.get('/:id', async (req, res) => {
 
 router.post('/addservice', async (req, res) => {
     try {
-        console.log("##############@@@@@@@@@@@@@@@@@@");
-
         const service = await Service.create({
             requester: req.session.user_id,
+            responder: req.session.user_id,
+            responder_first_name: "suva",
+            responder_last_name: "jadhav",
             service_name: req.body.service_name,
             service_description: req.body.service_description,
             service_price: req.body.service_price,
