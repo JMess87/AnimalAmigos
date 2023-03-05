@@ -37,9 +37,10 @@ document
     .addEventListener('click', editServiceFormHandler);
 
 const delButtonHandler = async (event) => {
+    event.preventDefault();
     if (event.target.hasAttribute('data-id')) {
+        event.preventDefault();
         const id = event.target.getAttribute('data-id');
-
         const response = await fetch(`/api/services/${id}`, {
             method: 'DELETE',
         });
@@ -52,7 +53,10 @@ const delButtonHandler = async (event) => {
     }
 };
 
-document
-    .querySelector('#delete')
-    .addEventListener('click', delButtonHandler);
+// document
+//     .querySelector('#delete')
+//     .addEventListener('click', delButtonHandler);
 
+document
+    .getElementsByClassName('deleteServiceBtn')
+    .addEventListener('click', delButtonHandler);

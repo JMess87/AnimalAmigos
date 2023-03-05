@@ -28,12 +28,12 @@
                             </div>
                             <div class="col-md-3">
                                 <div class="card-body mt-3">
-                                    <h4 class="service-points">{{ service.service_price }}<span
-                                            class="fs-6">Points</span></h4>
-                                    <p class="mb-2 fw-bold" id="post-date-text">Status: {{ service.service_status }}</p>
-                                    <p class="mb-2" id="post-date-text">Requester: {{ user.first_name }} {{
+                                    <h4 class="service-points">{{ service.service_price }}<span class="fs-6">$</span>
+                                    </h4>
+                                    <p class="mb-2 fw-bold post-date-text">Status: {{ service.service_status }}</p>
+                                    <p class="mb-2 post-date-text">Requester: {{ user.first_name }} {{
                                         user.last_name }}</p>
-                                    <p class="mb-2" id="post-date-text">Responder: {{ service.responder_first_name }} {{
+                                    <p class="mb-2 post-date-text">Responder: {{ service.responder_first_name }} {{
                                         responder_last_name }}</p>
                                     {{!-- <p id="service_id">Here : {{ id }}</p> --}}
                                     <div class="d-grid gap-2 d-md-flex mt-3 mb-3">

@@ -14,7 +14,7 @@ const serviceFormHandler = async (event) => {
         // Send a POST request to the API endpoint
         const response = await fetch('/api/services/addservice', {
             method: 'POST',
-            body: JSON.stringify({ service_name, service_description, service_price, service_status, service_date,  service_time, service_location }),
+            body: JSON.stringify({ service_name, service_description, service_price, service_status, service_date, service_time, service_location }),
             headers: { 'Content-Type': 'application/json' },
         });
 
